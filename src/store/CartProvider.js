@@ -4,12 +4,12 @@ import CartContext from './cart-context';
 
 const defaultCartState = {
     items: [],
-    totalAmout: 0
+    totalAmount: 0
 }
 
 const cartReducer = (state, action) => {
     
-    return defaultCartState
+    return defaultCartState;
 };
 
 const CartProvider = props => {
@@ -21,7 +21,7 @@ const CartProvider = props => {
     const removeItemFromCartHandler = id => {};
 
     const cartContext = {
-        items: cartReducer.state.items,
+        items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCartHandler,
         removeItem: removeItemFromCartHandler 
